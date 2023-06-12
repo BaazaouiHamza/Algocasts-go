@@ -1,4 +1,4 @@
-package main
+package reversestring
 
 import "strings"
 
@@ -10,8 +10,4 @@ func reverseString(str string) string {
 		rev = append(rev, arr[i])
 	}
 	return strings.Join(rev, "")
-}
-
-func main() {
-	println(reverseString("gogogogo"))
 }
