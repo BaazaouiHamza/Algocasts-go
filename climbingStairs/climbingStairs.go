@@ -24,15 +24,20 @@ Framework For Solving DP Problems:
 */
 
 // Time Complexity: O(n)
-// Space Complexity: O(n)
+// Space Complexity: O(1)
 func climbStairs(n int) int {
-	dp := make([]int, n+1)
-	dp[0] = 1
-	dp[1] = 1
+	// dp := make([]int, n+1)
+	// dp[0] = 1
+	// dp[1] = 1
 
+	a := 1
+	b := 1
+	var c int
 	for i := 2; i <= n; i++ {
-		dp[i] = dp[i-1] + dp[i-2]
+		// dp[i] = dp[i-1] + dp[i-2]
+		c = a + b
+		a, b = b, c
 	}
 
-	return dp[n]
+	return c
 }
