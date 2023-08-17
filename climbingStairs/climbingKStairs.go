@@ -11,7 +11,7 @@ Problem:
 */
 
 // Time Complexity: O(nk)
-// Space Complexity: O(n)
+// Space Complexity: O(k)
 func climbKStairs(n int, k int) int {
 	dp := make([]int, k)
 	dp[0] = 1
